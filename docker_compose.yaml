@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  flask-api:
+    build: .
+    ports:
+      - "5000:5000"
+
+  streamlit:
+    build: .
+    command: streamlit run streamlit_app.py
+    ports:
+      - "8501:8501"
